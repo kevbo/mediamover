@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block container %}
+<h1>Choose a directory to move to:</h1>
+<ul class="nav nav-tabs nav-stacked">
+    {% for targetname in targets %}
+      <li> <a href="/move/?source={{source}}&target={{targetname}}">{{targetname}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
